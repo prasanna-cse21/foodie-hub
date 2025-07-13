@@ -13,23 +13,14 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ title, showCart = false, cartCount = 0, onCartClick }) => {
   const { user, signOut } = useAuth();
   const [scrollY, setScrollY] = useState(0);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({
-        x: (e.clientX / window.innerWidth) * 100,
-        y: (e.clientY / window.innerHeight) * 100,
-      });
-    };
 
     window.addEventListener('scroll', handleScroll);
-    window.addEventListener('mousemove', handleMouseMove);
     
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('mousemove', handleMouseMove);
     };
   }, []);
 
@@ -40,10 +31,6 @@ const Header: React.FC<HeaderProps> = ({ title, showCart = false, cartCount = 0,
           <div className="flex items-center">
             <div 
               className="flex-shrink-0 flex items-center group"
-              style={{
-                transform: `perspective(1000px) rotateX(${(mousePosition.y - 50) * 0.01}deg) rotateY(${(mousePosition.x - 50) * 0.01}deg)`,
-                transition: 'transform 0.3s ease',
-              }}
             >
               <div className="w-16 h-16 flex items-center justify-center mr-4 group-hover:scale-110 transition-all duration-500 relative overflow-hidden glass-morphism rounded-2xl">
                 <ChefHat className="w-8 h-8 text-orange-500" />
@@ -51,7 +38,7 @@ const Header: React.FC<HeaderProps> = ({ title, showCart = false, cartCount = 0,
               </div>
               <div>
                 <span className="text-xl font-bold gradient-text tracking-wide">FoodieHub</span>
-                <div className="text-xs text-gray-500 dark:text-gray-400 font-medium">Premium Food Ordering</div>
+                <div className="text-xs text-gray-600 dark:text-gray-400 font-medium">Premium Food Ordering</div>
               </div>
             </div>
             <div 
@@ -60,7 +47,7 @@ const Header: React.FC<HeaderProps> = ({ title, showCart = false, cartCount = 0,
                 transform: `translateY(${scrollY * 0.02}px)`,
               }}
             >
-              <h1 className="text-lg font-medium text-gray-700 dark:text-gray-200">{title}</h1>
+              <h1 className="text-lg font-medium text-gray-800 dark:text-gray-200">{title}</h1>
             </div>
           </div>
 
@@ -70,11 +57,7 @@ const Header: React.FC<HeaderProps> = ({ title, showCart = false, cartCount = 0,
             {showCart && (
               <button
                 onClick={onCartClick}
-                className="relative p-3 text-gray-600 dark:text-gray-400 hover:text-orange-500 transition-all duration-300 hover-lift rounded-xl glass-morphism group"
-                style={{
-                  transform: `perspective(1000px) rotateX(${(mousePosition.y - 50) * 0.005}deg) rotateY(${(mousePosition.x - 50) * 0.005}deg)`,
-                  transition: 'transform 0.3s ease',
-                }}
+                className="relative p-3 text-gray-700 dark:text-gray-400 hover:text-orange-500 transition-all duration-300 hover-lift rounded-xl glass-morphism group"
               >
                 <ShoppingCart className="w-6 h-6 group-hover:scale-110 transition-transform" />
                 {cartCount > 0 && (
@@ -88,10 +71,6 @@ const Header: React.FC<HeaderProps> = ({ title, showCart = false, cartCount = 0,
             {/* Desktop User Info */}
             <div 
               className="hidden md:flex items-center space-x-3 glass-morphism-strong rounded-xl px-4 py-3 border border-black/10 dark:border-white/15 hover-lift group"
-              style={{
-                transform: `perspective(1000px) rotateX(${(mousePosition.y - 50) * 0.005}deg) rotateY(${(mousePosition.x - 50) * 0.005}deg)`,
-                transition: 'transform 0.3s ease',
-              }}
             >
               <div className="flex items-center space-x-3">
                 <div className={`w-8 h-8 rounded-xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 ${
@@ -110,9 +89,9 @@ const Header: React.FC<HeaderProps> = ({ title, showCart = false, cartCount = 0,
                   )}
                 </div>
                 <div>
-                  <span className="text-sm font-medium text-black dark:text-white group-hover:text-orange-500 transition-colors">{user?.full_name}</span>
+                  <span className="text-sm font-medium text-gray-800 dark:text-white group-hover:text-orange-500 transition-colors">{user?.full_name}</span>
                   {user?.role === 'student' && user?.registration_number && (
-                    <div className="text-xs text-gray-500 dark:text-gray-400">{user.registration_number}</div>
+                    <div className="text-xs text-gray-600 dark:text-gray-400">{user.registration_number}</div>
                   )}
                   <div className={`text-xs capitalize font-medium transition-colors ${
                     user?.role === 'staff' ? 'text-orange-500 group-hover:text-orange-400' : 'text-red-500 group-hover:text-red-400'
@@ -123,7 +102,7 @@ const Header: React.FC<HeaderProps> = ({ title, showCart = false, cartCount = 0,
               </div>
               <button
                 onClick={signOut}
-                className="p-2 text-gray-500 dark:text-gray-400 hover:text-red-500 transition-all duration-300 rounded-lg hover:scale-110"
+                className="p-2 text-gray-600 dark:text-gray-400 hover:text-red-500 transition-all duration-300 rounded-lg hover:scale-110"
                 title="Sign Out"
               >
                 <LogOut className="w-5 h-5" />

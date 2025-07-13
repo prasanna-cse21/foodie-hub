@@ -45,10 +45,10 @@ body {
 /* Glass Morphism - Light Mode */
 .glass-morphism {
   background: linear-gradient(135deg, 
-    rgba(255, 255, 255, 0.9) 0%, 
-    rgba(255, 255, 255, 0.7) 100%);
+    rgba(255, 255, 255, 0.95) 0%, 
+    rgba(255, 255, 255, 0.85) 100%);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.15);
   box-shadow: 
     0 8px 32px rgba(0, 0, 0, 0.1),
     inset 0 1px 0 rgba(255, 255, 255, 0.8);
@@ -67,8 +67,8 @@ body {
 
 .glass-morphism:hover {
   background: linear-gradient(135deg, 
-    rgba(255, 255, 255, 0.95) 0%, 
-    rgba(255, 255, 255, 0.8) 100%);
+    rgba(255, 255, 255, 0.98) 0%, 
+    rgba(255, 255, 255, 0.9) 100%);
   border-color: rgba(249, 115, 22, 0.3);
   transform: translateY(-2px);
   box-shadow: 
@@ -88,10 +88,10 @@ body {
 
 .glass-morphism-strong {
   background: linear-gradient(135deg, 
-    rgba(255, 255, 255, 0.95) 0%, 
-    rgba(255, 255, 255, 0.85) 100%);
+    rgba(255, 255, 255, 0.98) 0%, 
+    rgba(255, 255, 255, 0.92) 100%);
   backdrop-filter: blur(30px);
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: 
     0 16px 48px rgba(0, 0, 0, 0.15),
     inset 0 1px 0 rgba(255, 255, 255, 0.9);
@@ -109,10 +109,10 @@ body {
 
 .glass-card {
   background: linear-gradient(135deg, 
-    rgba(255, 255, 255, 0.8) 0%, 
-    rgba(255, 255, 255, 0.6) 100%);
+    rgba(255, 255, 255, 0.9) 0%, 
+    rgba(255, 255, 255, 0.8) 100%);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.15);
   box-shadow: 
     0 8px 32px rgba(0, 0, 0, 0.1),
     inset 0 1px 0 rgba(255, 255, 255, 0.7);
@@ -151,8 +151,8 @@ body {
 
 .glass-card:hover {
   background: linear-gradient(135deg, 
-    rgba(255, 255, 255, 0.9) 0%, 
-    rgba(255, 255, 255, 0.7) 100%);
+    rgba(255, 255, 255, 0.95) 0%, 
+    rgba(255, 255, 255, 0.85) 100%);
   border-color: rgba(249, 115, 22, 0.3);
   transform: translateY(-8px) scale(1.02);
   box-shadow: 
@@ -219,10 +219,10 @@ body {
 /* Enhanced Auth Form Styles */
 .auth-form-container {
   background: linear-gradient(135deg, 
-    rgba(255, 255, 255, 0.95) 0%, 
-    rgba(255, 255, 255, 0.85) 100%);
+    rgba(255, 255, 255, 0.98) 0%, 
+    rgba(255, 255, 255, 0.92) 100%);
   backdrop-filter: blur(40px);
-  border: 2px solid rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(0, 0, 0, 0.15);
   box-shadow: 
     0 25px 60px rgba(0, 0, 0, 0.1),
     inset 0 1px 0 rgba(255, 255, 255, 0.9);
@@ -255,12 +255,12 @@ body {
 /* Modern Input Styles */
 .modern-input {
   background: linear-gradient(135deg, 
-    rgba(255, 255, 255, 0.9) 0%, 
-    rgba(255, 255, 255, 0.7) 100%);
+    rgba(255, 255, 255, 0.95) 0%, 
+    rgba(255, 255, 255, 0.85) 100%);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
-  color: #000;
+  color: #1f2937;
   box-shadow: 
     inset 0 2px 4px rgba(0, 0, 0, 0.05),
     0 1px 0 rgba(255, 255, 255, 0.8);
@@ -279,8 +279,8 @@ body {
 
 .modern-input:focus {
   background: linear-gradient(135deg, 
-    rgba(255, 255, 255, 0.95) 0%, 
-    rgba(255, 255, 255, 0.8) 100%);
+    rgba(255, 255, 255, 0.98) 0%, 
+    rgba(255, 255, 255, 0.9) 100%);
   border-color: rgba(249, 115, 22, 0.5);
   box-shadow: 
     0 0 25px rgba(249, 115, 22, 0.2),
@@ -301,7 +301,7 @@ body {
 }
 
 .modern-input::placeholder {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(107, 114, 128, 0.8);
 }
 
 .dark .modern-input::placeholder {
@@ -333,11 +333,15 @@ body {
     rgba(251, 191, 36, 0.2) 0%, 
     rgba(251, 191, 36, 0.1) 100%);
   border: 1px solid rgba(251, 191, 36, 0.4);
-  color: #f59e0b;
+  color: #d97706;
   backdrop-filter: blur(20px);
   box-shadow: 
     0 4px 20px rgba(251, 191, 36, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.dark .status-pending {
+  color: #f59e0b;
 }
 
 .status-processing {
@@ -345,11 +349,15 @@ body {
     rgba(249, 115, 22, 0.2) 0%, 
     rgba(249, 115, 22, 0.1) 100%);
   border: 1px solid rgba(249, 115, 22, 0.4);
-  color: #f97316;
+  color: #ea580c;
   backdrop-filter: blur(20px);
   box-shadow: 
     0 4px 20px rgba(249, 115, 22, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.dark .status-processing {
+  color: #f97316;
 }
 
 .status-ready {
@@ -357,11 +365,15 @@ body {
     rgba(34, 197, 94, 0.2) 0%, 
     rgba(34, 197, 94, 0.1) 100%);
   border: 1px solid rgba(34, 197, 94, 0.4);
-  color: #22c55e;
+  color: #16a34a;
   backdrop-filter: blur(20px);
   box-shadow: 
     0 4px 20px rgba(34, 197, 94, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.dark .status-ready {
+  color: #22c55e;
 }
 
 .status-completed {
@@ -369,9 +381,13 @@ body {
     rgba(107, 114, 128, 0.2) 0%, 
     rgba(107, 114, 128, 0.1) 100%);
   border: 1px solid rgba(107, 114, 128, 0.4);
-  color: #6b7280;
+  color: #4b5563;
   backdrop-filter: blur(20px);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.dark .status-completed {
+  color: #6b7280;
 }
 
 .status-cancelled {
@@ -379,11 +395,15 @@ body {
     rgba(239, 68, 68, 0.2) 0%, 
     rgba(239, 68, 68, 0.1) 100%);
   border: 1px solid rgba(239, 68, 68, 0.4);
-  color: #ef4444;
+  color: #dc2626;
   backdrop-filter: blur(20px);
   box-shadow: 
     0 4px 20px rgba(239, 68, 68, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.dark .status-cancelled {
+  color: #ef4444;
 }
 
 /* Modern Text Effects */
@@ -396,36 +416,16 @@ body {
   animation: gradient-shift 3s ease-in-out infinite;
 }
 
-/* Enhanced Background */
+/* Enhanced Background - Removed cursor-based animations */
 .modern-gradient {
   background: 
-    radial-gradient(ellipse at 20% 30%, rgba(249, 115, 22, 0.1) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 70%, rgba(234, 88, 12, 0.08) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 20%, rgba(220, 38, 38, 0.06) 0%, transparent 50%),
     linear-gradient(135deg, #ffffff 0%, #f9fafb 25%, #f3f4f6 50%, #f9fafb 75%, #ffffff 100%);
   position: relative;
 }
 
 .dark .modern-gradient {
   background: 
-    radial-gradient(ellipse at 20% 30%, rgba(249, 115, 22, 0.1) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 70%, rgba(234, 88, 12, 0.08) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 20%, rgba(220, 38, 38, 0.06) 0%, transparent 50%),
     linear-gradient(135deg, #000000 0%, #111827 25%, #1f2937 50%, #111827 75%, #000000 100%);
-}
-
-.modern-gradient::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: 
-    radial-gradient(circle at 25% 25%, rgba(249, 115, 22, 0.05) 0%, transparent 50%),
-    radial-gradient(circle at 75% 75%, rgba(234, 88, 12, 0.04) 0%, transparent 50%);
-  animation: background-shift 20s ease-in-out infinite;
-  pointer-events: none;
 }
 
 /* Toast Notifications */
@@ -435,10 +435,14 @@ body {
     rgba(34, 197, 94, 0.1) 100%);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(34, 197, 94, 0.4);
-  color: #22c55e;
+  color: #16a34a;
   box-shadow: 
     0 8px 32px rgba(34, 197, 94, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.dark .toast-success {
+  color: #22c55e;
 }
 
 .toast-error {
@@ -447,10 +451,14 @@ body {
     rgba(239, 68, 68, 0.1) 100%);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(239, 68, 68, 0.4);
-  color: #ef4444;
+  color: #dc2626;
   box-shadow: 
     0 8px 32px rgba(239, 68, 68, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.dark .toast-error {
+  color: #ef4444;
 }
 
 /* Loading Spinner */
@@ -499,10 +507,10 @@ body {
 /* Theme Toggle Button */
 .theme-toggle {
   background: linear-gradient(135deg, 
-    rgba(255, 255, 255, 0.9) 0%, 
-    rgba(255, 255, 255, 0.7) 100%);
+    rgba(255, 255, 255, 0.95) 0%, 
+    rgba(255, 255, 255, 0.85) 100%);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
 }
 
@@ -528,17 +536,6 @@ body {
   }
   50% { 
     background-position: 100% 50%;
-  }
-}
-
-@keyframes background-shift {
-  0%, 100% { 
-    opacity: 0.3;
-    transform: scale(1) rotate(0deg);
-  }
-  50% { 
-    opacity: 0.5;
-    transform: scale(1.1) rotate(180deg);
   }
 }
 
@@ -740,7 +737,7 @@ body {
 }
 
 .modern-black {
-  color: #000000;
+  color: #1f2937;
 }
 
 .dark .modern-black {

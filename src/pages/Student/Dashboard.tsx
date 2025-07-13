@@ -442,7 +442,7 @@ const StudentDashboard: React.FC = () => {
             </div>
             <button
               onClick={signOut}
-              className="p-2 text-gray-400 hover:text-red-400 transition-all duration-300 rounded-lg hover:bg-white/10 hover:scale-110 magnetic-hover ripple-effect ml-4"
+              className="p-2 text-gray-600 dark:text-gray-400 hover:text-red-400 transition-all duration-300 rounded-lg hover:bg-white/10 hover:scale-110 magnetic-hover ripple-effect ml-4"
               title="Sign Out"
             >
               <LogOut className="w-4 h-4" />
@@ -470,7 +470,7 @@ const StudentDashboard: React.FC = () => {
               className={`py-2 px-1 border-b-2 font-medium text-sm transition-colors ${
                 activeTab === 'menu'
                   ? 'border-indigo-500 text-indigo-400'
-                  : 'border-transparent text-gray-500 hover:text-gray-300 hover:border-gray-400'
+                  : 'border-transparent text-gray-600 dark:text-gray-500 hover:text-gray-800 dark:hover:text-gray-300 hover:border-gray-400'
               }`}
             >
               Menu
@@ -480,7 +480,7 @@ const StudentDashboard: React.FC = () => {
               className={`py-2 px-1 border-b-2 font-medium text-sm transition-colors ${
                 activeTab === 'orders'
                   ? 'border-indigo-500 text-indigo-400'
-                  : 'border-transparent text-gray-500 hover:text-gray-300 hover:border-gray-400'
+                  : 'border-transparent text-gray-600 dark:text-gray-500 hover:text-gray-800 dark:hover:text-gray-300 hover:border-gray-400'
               }`}
             >
               Your Orders
@@ -496,7 +496,7 @@ const StudentDashboard: React.FC = () => {
               className={`py-2 px-1 border-b-2 font-medium text-sm transition-colors ${
                 activeTab === 'menu'
                   ? 'border-blue-500 text-blue-400'
-                  : 'border-transparent text-gray-500 hover:text-gray-300 hover:border-gray-400'
+                  : 'border-transparent text-gray-600 dark:text-gray-500 hover:text-gray-800 dark:hover:text-gray-300 hover:border-gray-400'
               }`}
             >
               Menu
@@ -506,7 +506,7 @@ const StudentDashboard: React.FC = () => {
               className={`py-2 px-1 border-b-2 font-medium text-sm transition-colors ${
                 activeTab === 'orders'
                   ? 'border-blue-500 text-blue-400'
-                  : 'border-transparent text-gray-500 hover:text-gray-300 hover:border-gray-400'
+                  : 'border-transparent text-gray-600 dark:text-gray-500 hover:text-gray-800 dark:hover:text-gray-300 hover:border-gray-400'
               }`}
             >
               Your Orders
@@ -520,7 +520,7 @@ const StudentDashboard: React.FC = () => {
             {/* Search and Filter */}
             <div className="mb-8 flex flex-col sm:flex-row gap-4">
               <div className="relative flex-1">
-                <Search className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
+                <Search className="absolute left-3 top-3 h-5 w-5 text-gray-500 dark:text-gray-400" />
                 <input
                   type="text"
                   placeholder="Search for delicacies..."
@@ -530,7 +530,7 @@ const StudentDashboard: React.FC = () => {
                 />
               </div>
               <div className="relative">
-                <Filter className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
+                <Filter className="absolute left-3 top-3 h-5 w-5 text-gray-500 dark:text-gray-400" />
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
@@ -575,14 +575,14 @@ const StudentDashboard: React.FC = () => {
                     {/* Card Content - Flex grow to push bottom content down */}
                     <div className="p-6 flex flex-col flex-grow">
                       <div className="flex justify-between items-start mb-2">
-                        <h3 className="text-xl font-semibold text-white">{item.name}</h3>
+                        <h3 className="text-xl font-semibold text-gray-800 dark:text-white">{item.name}</h3>
                         <span className="text-2xl font-bold cosmic-text">₹{item.price}</span>
                       </div>
-                      <p className="text-gray-400 mb-4 flex-grow">{item.description}</p>
+                      <p className="text-gray-600 dark:text-gray-400 mb-4 flex-grow">{item.description}</p>
                       
                       {/* Bottom section - Always at bottom */}
                       <div className="mt-auto">
-                        <div className="flex items-center justify-between text-sm text-gray-500 mb-3">
+                        <div className="flex items-center justify-between text-sm text-gray-600 dark:text-gray-500 mb-3">
                           <span>Serves: {item.serves}</span>
                           <span className={`font-medium ${isOutOfStock ? 'text-red-400' : 'text-green-400'}`}>
                             Available: {item.quantity_available}
@@ -615,10 +615,10 @@ const StudentDashboard: React.FC = () => {
             {filteredItems.length === 0 && (
               <div className="text-center py-12">
                 <div className="w-16 h-16 glass-morphism rounded-full flex items-center justify-center mx-auto mb-4 border border-white/20">
-                  <Search className="w-8 h-8 text-gray-400" />
+                  <Search className="w-8 h-8 text-gray-500 dark:text-gray-400" />
                 </div>
-                <h3 className="text-lg font-medium text-white mb-2">No delicacies found</h3>
-                <p className="text-gray-400">Try adjusting your search or filter criteria</p>
+                <h3 className="text-lg font-medium text-gray-800 dark:text-white mb-2">No delicacies found</h3>
+                <p className="text-gray-600 dark:text-gray-400">Try adjusting your search or filter criteria</p>
               </div>
             )}
           </>
@@ -628,10 +628,10 @@ const StudentDashboard: React.FC = () => {
         {activeTab === 'orders' && (
           <div className="space-y-6">
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-              <h2 className="text-2xl font-bold text-white">Your Orders</h2>
+              <h2 className="text-2xl font-bold text-gray-800 dark:text-white">Your Orders</h2>
               <div className="glass-morphism px-4 py-2 rounded-lg border border-white/20">
-                <span className="text-sm text-gray-400">Total Orders: </span>
-                <span className="font-semibold text-white">{orders.length}</span>
+                <span className="text-sm text-gray-600 dark:text-gray-400">Total Orders: </span>
+                <span className="font-semibold text-gray-800 dark:text-white">{orders.length}</span>
               </div>
             </div>
 
@@ -642,16 +642,16 @@ const StudentDashboard: React.FC = () => {
             ) : orders.length === 0 ? (
               <div className="text-center py-12">
                 <div className="w-16 h-16 glass-morphism rounded-full flex items-center justify-center mx-auto mb-4 border border-white/20">
-                  <Package className="w-8 h-8 text-gray-400" />
+                  <Package className="w-8 h-8 text-gray-500 dark:text-gray-400" />
                 </div>
-                <h3 className="text-lg font-medium text-white mb-2">No orders yet</h3>
-                <p className="text-gray-400 mb-6">Your orders will appear here</p>
+                <h3 className="text-lg font-medium text-gray-800 dark:text-white mb-2">No orders yet</h3>
+                <p className="text-gray-600 dark:text-gray-400 mb-6">Your orders will appear here</p>
                 <button
                   onClick={() => setActiveTab('menu')}
                   className="modern-button text-white px-6 py-2 rounded-lg transition-all duration-200"
-                >
-                  Browse Menu
-                </button>
+                <ShoppingCart className="w-16 h-16 text-gray-500 dark:text-gray-400 mx-auto mb-4" />
+                <h3 className="text-lg font-medium text-gray-800 dark:text-white mb-2">Your cart is empty</h3>
+                <p className="text-gray-600 dark:text-gray-400">Add some delicacies to get started!</p>
               </div>
             ) : (
               <div className="grid gap-6">
@@ -659,10 +659,10 @@ const StudentDashboard: React.FC = () => {
                   <div key={order.id} className="glass-morphism-strong rounded-xl p-6">
                     <div className="flex flex-col sm:flex-row justify-between items-start mb-4 gap-4">
                       <div>
-                        <h3 className="text-lg font-semibold text-white">
+                        <h3 className="text-lg font-semibold text-gray-800 dark:text-white">
                           Order #{order.id.slice(0, 8)}
                         </h3>
-                        <p className="text-sm text-gray-400">
+                        <p className="text-sm text-gray-600 dark:text-gray-400">
                           {new Date(order.created_at).toLocaleDateString()} at{' '}
                           {new Date(order.created_at).toLocaleTimeString()}
                         </p>
@@ -677,7 +677,7 @@ const StudentDashboard: React.FC = () => {
                     </div>
 
                     <div className="mb-4">
-                      <h4 className="font-medium text-white mb-3">Items:</h4>
+                      <h4 className="font-medium text-gray-800 dark:text-white mb-3">Items:</h4>
                       <div className="space-y-3">
                         {order.order_items.map((item) => (
                           <div key={item.id} className="flex items-center space-x-4 p-3 glass-morphism rounded-lg border border-white/10">
@@ -687,12 +687,12 @@ const StudentDashboard: React.FC = () => {
                               className="w-12 h-12 object-cover rounded-lg"
                             />
                             <div className="flex-1">
-                              <h5 className="font-medium text-white">{item.menu_item.name}</h5>
+                              <h5 className="font-medium text-gray-800 dark:text-white">{item.menu_item.name}</h5>
                               <p className="text-sm text-indigo-400">{item.menu_item.canteen_name}</p>
                             </div>
                             <div className="text-left">
-                              <p className="font-medium text-white">x{item.quantity}</p>
-                              <p className="text-sm text-gray-400">₹{item.price * item.quantity}</p>
+                              <p className="font-medium text-gray-800 dark:text-white">x{item.quantity}</p>
+                              <p className="text-sm text-gray-600 dark:text-gray-400">₹{item.price * item.quantity}</p>
                             </div>
                           </div>
                         ))}
@@ -734,12 +734,12 @@ const StudentDashboard: React.FC = () => {
           <div className="absolute right-0 top-0 h-full w-full max-w-md glass-morphism-strong flex flex-col border-l border-white/20">
             {/* Cart Header */}
             <div className="flex items-center justify-between p-6 border-b border-white/20">
-              <h2 className="text-xl font-semibold text-white">Your Cart</h2>
+              <h2 className="text-xl font-semibold text-gray-800 dark:text-white">Your Cart</h2>
               <button
                 onClick={() => setIsCartOpen(false)}
-                className="p-2 hover:bg-white/10 rounded-lg transition-colors"
+                className="p-2 text-gray-600 dark:text-gray-400 hover:bg-white/10 rounded-lg transition-colors"
               >
-                <X className="w-6 h-6 text-gray-400" />
+                <X className="w-6 h-6" />
               </button>
             </div>
 
@@ -767,10 +767,10 @@ const StudentDashboard: React.FC = () => {
                             className="w-16 h-16 object-cover rounded-lg"
                           />
                           <div className="flex-1">
-                            <h4 className="font-medium text-white">{item.menu_item.name}</h4>
+                            <h4 className="font-medium text-gray-800 dark:text-white">{item.menu_item.name}</h4>
                             <p className="text-sm text-cosmic-400">₹{item.menu_item.price}</p>
-                            <p className="text-xs text-gray-500">{item.menu_item.canteen_name}</p>
-                            <p className="text-xs text-gray-500">Available: {currentAvailable}</p>
+                            <p className="text-xs text-gray-600 dark:text-gray-500">{item.menu_item.canteen_name}</p>
+                            <p className="text-xs text-gray-600 dark:text-gray-500">Available: {currentAvailable}</p>
                           </div>
                           <div className="flex items-center space-x-2">
                             <button
@@ -778,9 +778,9 @@ const StudentDashboard: React.FC = () => {
                               disabled={updatingCart === item.id}
                               className="w-8 h-8 flex items-center justify-center rounded-full glass-morphism hover:bg-white/10 transition-colors disabled:opacity-50 border border-white/20"
                             >
-                              <Minus className="w-4 h-4 text-white" />
+                              <Minus className="w-4 h-4 text-gray-700 dark:text-white" />
                             </button>
-                            <span className="w-8 text-center font-medium text-white">
+                            <span className="w-8 text-center font-medium text-gray-800 dark:text-white">
                               {updatingCart === item.id ? '...' : item.quantity}
                             </span>
                             <button
@@ -788,7 +788,7 @@ const StudentDashboard: React.FC = () => {
                               disabled={updatingCart === item.id || !canIncrease}
                               className="w-8 h-8 flex items-center justify-center rounded-full glass-morphism hover:bg-white/10 transition-colors disabled:opacity-50 border border-white/20"
                             >
-                              <Plus className="w-4 h-4 text-white" />
+                              <Plus className="w-4 h-4 text-gray-700 dark:text-white" />
                             </button>
                           </div>
                         </div>
@@ -808,7 +808,7 @@ const StudentDashboard: React.FC = () => {
             {cartItems.length > 0 && (
               <div className="border-t border-white/20 p-6">
                 <div className="flex justify-between items-center mb-4">
-                  <span className="text-lg font-semibold text-white">Total:</span>
+                  <span className="text-lg font-semibold text-gray-800 dark:text-white">Total:</span>
                   <span className="text-2xl font-bold gradient-text">₹{cartTotal.toFixed(2)}</span>
                 </div>
                 <button
